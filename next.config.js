@@ -39,6 +39,6 @@ module.exports = (phase,{ defaultConfig }) => {
 
 
   return {  
-    /// NOT development
+    eslint:{ ignoreDuringBuilds:true }
   }
 }

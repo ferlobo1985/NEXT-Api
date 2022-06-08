@@ -24,7 +24,7 @@ const Posts = (props) =>  {
             </h1>
             <ul>
                 { appCtx.users.map( user=>(
-                    <li key={user.name}>{user.name}</li>
+                    <li>{user.name}</li>
                 ))
                 }
             </ul>
