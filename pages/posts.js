@@ -1,22 +1,33 @@
-import axios from 'axios'
-import { useEffect } from 'react'
 import { getPost } from './api/posts/[postid]'
+import { useContext } from 'react';
+import { AppContext } from '../store/app_context';
+import Link from 'next/link'
+
 
 
 const Posts = (props) =>  {
+    const appCtx =  useContext(AppContext);
 
+    const handleUser = () =>{
+        appCtx.addUser({name:'Steve'})
+    }
 
-    console.log(props)
-
-    // useEffect(()=>{
-    //     axios.get(`/api/posts/1`).then(response=>{
-    //         console.log(response.data)
-    //     })
-    // },[])
 
     return(
         <>
-            posts
+            <h1>
+                The users are
+            </h1>
+            <ul>
+                { appCtx.users.map( user=>(
+                    <li key={user.name}>{user.name}</li>
+                ))
+                }
+            </ul>
+            <div>
+                <button onClick={handleUser}>Add user</button>
+            </div>
+            <Link href="/">Go home</Link>
         </>
     )
 }
