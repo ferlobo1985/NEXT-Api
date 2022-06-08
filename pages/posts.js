@@ -8,6 +8,7 @@ import Head from 'next/head';
 
 const Posts = (props) =>  {
     const appCtx =  useContext(AppContext);
+    console.log('some change made')
 
     const handleUser = () =>{
         appCtx.addUser({name:'Steve'})
