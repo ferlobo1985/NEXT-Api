@@ -10,6 +10,9 @@ export default function Home(props) {
     })
   }
 
+
+console.log(props)
+
   const formik = useFormik({
     initialValues:{
       title:'',
@@ -68,5 +71,4 @@ export const getStaticProps = async() =>{
       posts:request.data
     }
   }
-
 }
