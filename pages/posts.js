@@ -2,6 +2,7 @@ import { getPost } from './api/posts/[postid]'
 import { useContext } from 'react';
 import { AppContext } from '../store/app_context';
 import Link from 'next/link'
+import Head from 'next/head';
 
 
 
@@ -15,6 +16,9 @@ const Posts = (props) =>  {
 
     return(
         <>
+            <Head>
+                <meta name="description" content="some posts related"/>
+            </Head>
             <h1>
                 The users are
             </h1>
