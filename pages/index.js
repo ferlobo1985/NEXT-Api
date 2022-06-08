@@ -63,12 +63,12 @@ console.log(props)
   )
 }
 
-export const getStaticProps = async() =>{
-  const request = await axios.get('http://localhost:3000/api/posts');
+// export const getStaticProps = async() =>{
+//   const request = await axios.get('http://localhost:3000/api/posts');
 
-  return{
-    props:{
-      posts:request.data
-    }
-  }
-}
+//   return{
+//     props:{
+//       posts:request.data
+//     }
+//   }
+// }
